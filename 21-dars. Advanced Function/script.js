@@ -1,23 +1,16 @@
 // // Advanced functions | call, apply, bind
 
-const user = [
-  {
+const user = {
     name: 'webbrian',
     lastname: 'academy',
     title: "It center"
-  },
-  {
-    name: "Digital",
-    lastname: 'One',
-    title: "It Center"
-  },
-];
+  }
 
 function getFull(a) {
-  console.log(`${this.name} ${this.lastname}`);
+  console.log(this.name, this.lastname);
 }
-
-// getFull.call({name: "webbrain", lastname:"academy"})
+getFull.apply(user)
+getFull.call({name: "webbrain", lastname:"academy"})
 
 // // for (let usr of user) {
 // //   getFull.call(usr);
